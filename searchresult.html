@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>FWYShop</title>
+
+    </head>
+    <body>
+        <!-- Navbar-->
+        <div style="height:10px; background:#27aae1;"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container" >
+                <a href="./index.html"><img src="./Images/FWYlogo.jpg" style="width:50px;height:50px"></a>
+                <a href="./index.html" class="nav-link">HOME</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapseFWY">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarcollapseFWY">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Categories
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./searchresult.html?cat=hats">HATS</a>
+                                <a class="dropdown-item" href="./searchresult.html?cat=jackets">JACKETS</a>
+                                <a class="dropdown-item" href="./searchresult.html?cat=sneakers">SNEAKERS</a>
+                                <a class="dropdown-item" href="./searchresult.html?cat=women">WOMEN</a>
+                                <a class="dropdown-item" href="./searchresult.html?cat=men">MEN</a>
+                                <a class="dropdown-item" href="./searchresult.html?cat=kids">KIDS</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" target="_blank" href="add_prod.php">Add Product(s)</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./searchresult.html?cat=hats" class="nav-link">HATS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./searchresult.html?cat=jackets" class="nav-link">JACKETS</a>
+                        </li>
+                        <li clase="nav-item">
+                            <a href="./searchresult.html?cat=sneakers" class="nav-link">SNEAKERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./searchresult.html?cat=women" class="nav-link">WOMEN'S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./searchresult.html?cat=men" class="nav-link">MEN'S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./searchresult.html?cat=kids" class="nav-link">KIDS</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="Shopping.php" class="nav-link"><i class="fas fa-gifts"></i>Shopping</a></li>
+                        <li class="nav-item"><a href="Carts.php" class="nav-link"><i class="fas fa-shopping-cart"></i>Carts</a></li>
+                        <li class="nav-item"><a href="Logout.php" class="nav-link text-danger"><i class="fas fa-sign-in-alt"></i>LogIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container" >
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapseFWY">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarcollapseFWY">
+                    <form class="form-inline my-2 my-lg-0 ml-auto" id="searchForm" action="searchresult.html">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div style="height:10px; background:#27aae1;"></div>
+        <!-- NAVBAR END -->
+        <!-- Main Area -->
+        <section>
+            <div class="sec-container">
+                <div class="fixed">
+                    <div>
+                        <p><h3 style="color:dodgerblue; text-align: center;">Sort</h3></p>
+                        <button sortby="price"  type="button" class="btn btn-primary mysort" name="mySort">Price</button>
+                        <button sortby="name" type="button" class="btn btn-primary mysort">Name</button>
+                        <button sortby="rating"  type="button" class="btn btn-primary mysort">Rating</button>
+                        
+                    </div>
+
+                    <div>
+                        <p><h3 style="color:dodgerblue; text-align: center;">Filter </h3><p>
+                        <br/><input class="filter_price" id="price_min" size=8 name="price_min" placeholder="Min Price" />
+                        <br/><input class="filter_price" id="price_max" size=8 name="price_max" placeholder="Max Price" />
+                    </div>
+                    <div class="shoping-list"> </div>
+                </div>
+                <div class="flex-item"> </div>
+            </div>
+        </section>      
+        <!-- Main Area END -->
+
+        <!-- FOOTER -->
+        <footer class="bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="lead text-center">Designed by | Mike Wang | Shi Feng | Ming hua Yang | <span id="year"></span> &copy; ----All right reserved.</p>
+                        <p class="text-center small"><a style="color: white;text-decoration: none">
+                            This site is a learning project for Algonquin College CST8285-310-314.
+                        </a></p>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
+        <div style="height:10px; background:#27aae1;"></div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="./js/fwyshop.js"></script>
+        <script>
+            $(`#year`).text(new Date().getFullYear());
+        </script>
+    </body>
+</html>
